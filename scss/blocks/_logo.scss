@@ -1,0 +1,9 @@
+.logo{
+    margin-right: 80px;
+}
+@include breakpoint-down(660px){
+    .logo__img{
+        width: 140px;
+        height: auto;
+    }
+}

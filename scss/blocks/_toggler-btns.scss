@@ -1,0 +1,30 @@
+.gamburger{
+    display: none;
+    width: 20px;
+    padding: 0;
+    height: 17px;
+    background-color: transparent;
+    background-image: url("../../img/gamgurger.png");
+    background-position: center;
+    border: none;
+}
+.exit{
+    display: none;
+    width: 18px;
+    height: 17px;
+    padding: 0;
+    background-color: transparent;
+    background-image: url("../../img/close.png");
+    background-position: center;
+    border: none;
+}
+@include breakpoint-down (660px) {
+    .gamburger{
+        display: block;
+    }
+    .exit{
+        display: block;
+        align-self: flex-end;
+        margin-bottom: 40px;
+    }
+}
