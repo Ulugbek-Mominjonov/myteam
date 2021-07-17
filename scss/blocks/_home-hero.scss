@@ -1,0 +1,93 @@
+.home-hero__container {
+    @include d-f;
+    justify-content: space-between;
+    padding-top: 100px;
+    padding-bottom: 250px;
+    background-color: $MidnightGreen;
+    background-image: url("../../img/hero-left.png"),
+                      url("../../img/hero-bottom.svg");
+    background-repeat: no-repeat;
+    background-position: left 35%, 90% bottom;
+}
+.home-hero__title {
+    width: 635px;
+    margin: 0;
+    margin-right: 30px;
+    font-weight: bold;
+    font-size: 100px;
+    line-height: 100px;
+    color: $White;
+
+    span{
+        color: $LightCoral;
+    }
+}
+.home-hero__text {
+    position: relative;
+    width: 445px;
+    padding-top: 83px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+    color: $White;
+
+    &::before{
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 55;
+        content: "";
+        width: 50px;
+        height: 4px;
+        background-color: $RaptureBlue;
+    }
+}
+@include breakpoint-down(1110px) {
+    .home-hero__title{
+        font-size: 80px;
+        line-height: 80px;
+    }
+    .home-hero__text{
+        padding-top: 50px;
+    }
+}
+@include breakpoint-down(1110px) {
+    .home-hero__container{
+        flex-direction: column;
+        justify-content: center;
+        padding-top: 80px;
+    }
+    .home-hero__title, .home-hero__text{
+        width: 60%;
+        text-align: center;
+    }
+    .home-hero__title{
+        font-size: 64px;
+        line-height: 56px;
+        margin-bottom: 24px;
+    }
+    .home-hero__text{
+        padding-top: 0;
+    }
+    .home-hero__text::before{
+        display: none;
+    }
+
+}
+@include breakpoint-down (768px){
+    .home-hero__container{
+        background-image: url("../../img/hero-bottom.svg");
+        background-repeat: no-repeat;
+        background-position: center bottom;
+    }
+    .home-hero__text{
+        font-size: 15px;
+        line-height: 28px;
+    }
+}
+@include breakpoint-down(660px){
+    .home-hero__title, .home-hero__text{
+        width: 80%;
+    }
+}

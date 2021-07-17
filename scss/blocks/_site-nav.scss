@@ -3,6 +3,7 @@
     width: 100%;
     top: 0;
     left: 0;
+    z-index: 99;
     padding-top: 35px;
     padding-bottom: 30px;
     background-color: $MidnightGreen;
@@ -59,9 +60,9 @@
         background-repeat: no-repeat;
         transform: translateX(100%);
         animation: togglerOpen .3s 1 forwards;
-        
+
         &--active{
-            display: flex;
+        display: flex;
         }
     }
     .sitenav__list{
